@@ -1,0 +1,3 @@
+[0206/175914.888:ERROR:process_reader_win.cc(151)] SuspendThread: アクセスが拒否されました。 (0x5)
+[0206/175914.888:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
+[0206/175914.888:ERROR:exception_snapshot_win.cc(98)] thread ID 17988 not found in process
