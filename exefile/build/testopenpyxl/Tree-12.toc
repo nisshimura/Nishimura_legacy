@@ -1,0 +1,5 @@
+('c:\\actions-runner\\_work\\_tool\\python\\3.7.8\\x64\\lib\\site-packages\\pluggy-0.13.1-py3.7.egg',
+ None,
+ {'*.pyc', '*.pyd', '*.py', '*.pyw', 'EGG-INFO', '*.cp37-win_amd64.pyd'},
+ 'DATA',
+ [])
