@@ -1,0 +1,260 @@
+item {
+ id: 1
+ name: '1p'
+}
+item {
+ id: 2
+ name: '2p'
+}
+item {
+ id: 3
+ name: '3p'
+}
+item {
+ id: 4
+ name: '4p'
+}
+item {
+ id: 5
+ name: '5p'
+}
+item {
+ id: 6
+ name: '5pr'
+}
+item {
+ id: 7
+ name: '6p'
+}
+item {
+ id: 8
+ name: '7p'
+}
+item {
+ id: 9
+ name: '8p'
+}
+item {
+ id: 10
+ name: '9p'
+}
+item {
+ id: 11
+ name: '1m'
+}
+item {
+ id: 12
+ name: '2m'
+}
+item {
+ id: 13
+ name: '3m'
+}
+item {
+ id: 14
+ name: '4m'
+}
+item {
+ id: 15
+ name: '5m'
+}
+item {
+ id: 16
+ name: '5mr'
+}
+item {
+ id: 17
+ name: '6m'
+}
+item {
+ id: 18
+ name: '7m'
+}
+item {
+ id: 19
+ name: '8m'
+}
+item {
+ id: 20
+ name: '9m'
+}
+item {
+ id: 21
+ name: '1s'
+}
+item {
+ id: 22
+ name: '2s'
+}
+item {
+ id: 23
+ name: '3s'
+}
+item {
+ id: 24
+ name: '4s'
+}
+item {
+ id: 25
+ name: '5s'
+}
+item {
+ id: 26
+ name: '5sr'
+}
+item {
+ id: 27
+ name: '6s'
+}
+item {
+ id: 28
+ name: '7s'
+}
+item {
+ id: 29
+ name: '8s'
+}
+item {
+ id: 30
+ name: '9s'
+}
+item {
+ id: 31
+ name: 'ton'
+}
+item {
+ id: 32
+ name: 'nan'
+}
+item {
+ id: 33
+ name: 'sha'
+}
+item {
+ id: 34
+ name: 'pei'
+}
+item {
+ id: 35
+ name: 'haku'
+}
+item {
+ id: 36
+ name: 'hatsu'
+}
+item {
+ id: 37
+ name: 'chun'
+}
+item {
+ id: 38
+ name: 'hand_ton_1'
+}
+item {
+ id: 39
+ name: 'hand_ton_2'
+}
+item {
+ id: 40
+ name: 'hand_ton_3'
+}
+item {
+ id: 41
+ name: 'hand_ton_4'
+}
+item {
+ id: 42
+ name: 'hand_nan_1'
+}
+item {
+ id: 43
+ name: 'hand_nan_2'
+}
+item {
+ id: 44
+ name: 'hand_nan_3'
+}
+item {
+ id: 45
+ name: 'hand_nan_4'
+}
+item {
+ id: 46
+ name: 'round_0'
+}
+item {
+ id: 47
+ name: 'round_1'
+}
+item {
+ id: 48
+ name: 'round_2'
+}
+item {
+ id: 49
+ name: 'round_3'
+}
+item {
+ id: 50
+ name: 'round_4'
+}
+item {
+ id: 51
+ name: 'round_5'
+}
+item {
+ id: 52
+ name: 'round_6'
+}
+item {
+ id: 53
+ name: 'round_7'
+}
+item {
+ id: 54
+ name: 'round_8'
+}
+item {
+ id: 55
+ name: 'round_9'
+}
+item {
+ id: 56
+ name: 'team_drivens'
+}
+item {
+ id: 57
+ name: 'team_exfurinkazan'
+}
+item {
+ id: 58
+ name: 'team_kadokawa'
+}
+item {
+ id: 59
+ name: 'team_konami'
+}
+item {
+ id: 60
+ name: 'team_abemas'
+}
+item {
+ id: 61
+ name: 'team_segasammy'
+}
+item {
+ id: 62
+ name: 'team_raiden'
+}
+item {
+ id: 63
+ name: 'team_pirates'
+}
+item {
+ id: 64
+ name: '不明'
+}
+item {
+ id: 65
+ name: 'sink'
+}

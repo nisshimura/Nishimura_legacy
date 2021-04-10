@@ -1,0 +1,183 @@
+###画像認識(https://blog.capilano-fw.com/?p=6250)
+    ##pip install dlib 
+        pip install cmake 
+        #visual studio のインストール(https://visualstudio.microsoft.com/ja/downloads/)
+        pip install opencv-python
+
+    ##dlibによる複数検知
+        (https://blog.fenrir-inc.com/jp/2017/11/droid_recognition.html)
+        (https://blog.fenrir-inc.com/jp/2018/03/droid_detect_by_dlib.html)
+
+    ##python3.7でやる！！
+
+    ##pip install ○○　--user(kerasとか)
+    ##ssd-keras の中にSSD300.hdf5を入れる
+    
+    ##cuda 使い方
+        cuda_nvidia(https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal)
+        pytorch(https://pytorch.org/get-started/locally/)(pip install **** --user)
+
+    ##AttributeError: module 'tensorflow' has no attribute 'placeholder'
+    (https://v-crn.hatenablog.com/entry/2019/12/20/TensorFlow_2_0_0%E3%81%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%81%A7%E5%87%BA%E3%81%8F%E3%82%8F%E3%81%97%E3%81%9F%E3%82%A8%E3%83%A9%E3%83%BC%EF%BC%9AAttributeError%3A_module_)
+    ssd_utils init() tf.compat.v1.disable_eager_execution()を追記
+
+    ##サイズは基本なんでもよい
+    #trainvalはtrainする写真の名前
+    #testはdetectする写真
+    #IOU　閾値の設定はssd.pyのself.detect.apply(0.45)
+    ###やったこと
+        #epoch数は12以上(anotationを12個)
+        ##inference.py ssd.py の21を34+1に変更(63+1),train.py
+        ##directML(pip --user)
+            ##Windows 10
+                Windows 10 Version 1709, 64-bit (Build 16299 or higher)
+                Python x86-64 3.5, 3.6, or 3.71
+                One of the following supported GPUs:
+                AMD Radeon R5/R7/R9 2xx series or newer
+                Intel HD Graphics 5xx or newer
+                NVIDIA GeForce GTX 9xx series GPU or newer
+                1 Note: Python 3.8 or newer is not currently supported. To use the official PyPi packages, the CPython interpreter is required. NumPy 1.19.4 is currently experiencing issues on Windows; this can be resolved by pinning the NumPy version, e.g. pip install numpy==1.18.5.
+
+                Windows Subsystem for Linux
+                Windows 10 Insider Preview, 64-bit (Build 20150 or higher)
+                Python x86-64 3.5, 3.6, or 3.72
+                One of the following supported GPUs:
+                AMD Radeon R5/R7/R9 2xx series or newer, and 20.20.01.05 WSL driver
+                Intel HD Graphics 6xx or newer, and 28.20.100.8322 WSL driver
+                NVIDIA GeForce GTX 9xx series GPU or newer, and 460.20 WSL driver
+                2 Note: Python 3.8 or newer is not currently supported. To use the official PyPi packages, the CPython interpreter is required.
+        ##tensorboard
+            ##tensorboard --logdir="C:\Users\ntaka\workspace\jobcan_autotool\code_recongphoto\pytorch_ssd_mahjan\logs"
+            ###http://127.0.0.1:6006/
+
+    ##labelIMG
+        #cd C:\Users\ntaka\workspace\windows_v1.8.0
+        #labelImg.exe "G:\ntaka\workspace\sophia_tehaitube\annotation\train" "G:\ntaka\workspace\sophia_tehaitube\annotation\defined_classes.txt"
+
+        1920*1080 960*540
+absl-py                0.11.0
+appdirs                1.4.4
+argon2-cffi            20.1.0
+astroid                2.3.3
+astunparse             1.6.3
+async-generator        1.10
+attrs                  20.3.0
+autopep8               1.5.4
+backcall               0.2.0
+bleach                 3.2.3
+cached-property        1.5.2
+cachetools             4.2.1
+certifi                2020.12.5
+cffi                   1.14.4
+chardet                4.0.0
+colorama               0.4.3
+cycler                 0.10.0
+data                   0.4
+decorator              4.4.2
+defusedxml             0.6.0
+entrypoints            0.3
+flatbuffers            1.12
+funcsigs               1.0.2
+gast                   0.3.3
+google-auth            1.24.0
+google-auth-oauthlib   0.4.2
+google-pasta           0.2.0
+grpcio                 1.32.0
+h5py                   2.10.0
+idna                   2.10
+imageio                2.9.0
+importlib-metadata     3.4.0
+ipykernel              5.4.3
+ipython                7.19.0
+ipython-genutils       0.2.0
+ipywidgets             7.6.3
+isort                  4.3.21
+jedi                   0.18.0
+Jinja2                 2.11.2
+jsonschema             3.2.0
+jupyter                1.0.0
+jupyter-client         6.1.11
+jupyter-console        6.2.0
+jupyter-core           4.7.0
+jupyterlab-pygments    0.1.2
+jupyterlab-widgets     1.0.0
+Keras                  2.3.1
+Keras-Applications     1.0.8
+Keras-Preprocessing    1.1.2
+kiwisolver             1.3.1
+lazy-object-proxy      1.4.3
+Markdown               3.3.3
+MarkupSafe             1.1.1
+matplotlib             3.3.4
+mccabe                 0.6.1
+mistune                0.8.4
+nbclient               0.5.1
+nbconvert              6.0.7
+nbformat               5.1.2
+nest-asyncio           1.5.1
+notebook               6.2.0
+numpy                  1.19.5
+oauthlib               3.1.0
+opencv-python          4.5.1.48
+opt-einsum             3.3.0
+packaging              20.8
+pandocfilters          1.4.3
+parso                  0.8.1
+pickle-mixin           1.0.2
+pickleshare            0.7.5
+Pillow                 8.1.0
+pip                    21.0.1
+prometheus-client      0.9.0
+prompt-toolkit         3.0.14
+protobuf               3.14.0
+pyasn1                 0.4.8
+pyasn1-modules         0.2.8
+pycodestyle            2.6.0
+pycparser              2.20
+Pygments               2.7.4
+pylint                 2.4.4
+pyparsing              2.4.7
+pypiwin32              223
+pyrsistent             0.17.3
+python-dateutil        2.8.1
+pytools                2021.1
+pywin32                300
+pywinpty               0.5.7
+PyYAML                 5.4.1
+pyzmq                  22.0.0
+qtconsole              5.0.2
+QtPy                   1.9.0
+requests               2.25.1
+requests-oauthlib      1.3.0
+rsa                    4.7
+scipy                  1.1.0
+selenium               3.141.0
+Send2Trash             1.5.0
+setuptools             47.1.0
+six                    1.15.0
+ssd                    1.0.0
+tensorboard            2.2.2
+tensorboard-plugin-wit 1.8.0
+tensorflow             2.2.0
+tensorflow-estimator   2.2.0
+termcolor              1.1.0
+terminado              0.9.2
+testpath               0.4.4
+Theano                 1.0.5
+toml                   0.10.2
+torch                  1.7.1+cu110
+torchaudio             0.7.2
+torchvision            0.8.2+cu110
+tornado                6.1
+traitlets              5.0.5
+typed-ast              1.4.0
+typing-extensions      3.7.4.3
+urllib3                1.26.3
+wcwidth                0.2.5
+webencodings           0.5.1
+Werkzeug               1.0.1
+wheel                  0.36.2
+widgetsnbextension     3.5.1
+WMI                    1.5.1
+wrapt                  1.12.1
+zipp                   3.4.0
