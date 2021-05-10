@@ -1,0 +1,3 @@
+http://www.boatrace-db.net/stadium/index/
+
+選手名、艇番、地点、平均気温、降水量、日照時間、最深積雪、日平均風速、日最多風向
