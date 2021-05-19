@@ -14,10 +14,15 @@ class Tuner():
                 'flac': ['/flac/', '*.flac', '.flac']
                 }
 
-    filename = 'C:/Users/ntaka/workspace/jobcan_autotool/code_videoediter'
+    filename = 'C:/Users/ntaka/workspace/Nishimura_legacy/code_videoediter'
+
     def __init__(self):
+        
         os.chdir(pathlib.Path(
             "./ffmpeg/ffmpeg-N-100411-g32586a42da-win64-gpl-shared-vulkan/bin"))
+        for i in self.ext_dict.keys():
+            if not os.path.exists(self.filename + '/'+ i) == True:
+                os.mkdir(self.filename + '/' + i)
     
     def convert(self, in_ext, out_ext):
         filename = self.filename
