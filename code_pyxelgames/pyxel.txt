@@ -1,0 +1,88 @@
+    """pyxelによる横スクロールスケボーゲーム
+    Todo:
+        __init__内のpyxresファイルのパスを確認する
+    """    
+
+class App():
+    """オブジェクトの状態の更新、描画、メイン関数が含まれる
+    """    
+    __init__():
+    """変数を定義する
+    Attributes:
+        barrier_dict(dict):   
+            障害物の種類、pyxres内における座標、サイズ,同時に表示させたい文字を辞書化
+            #{0:[[barrier_x,y],[width,height],[announce_x,y],[width,height]]}
+        status_dict(dict):
+            プレイヤーの状態と表示させる画像を一致させるために、状態、pyxres内における座標、サイズを辞書化
+            #{0:[[status_x,y],[width,height]]}
+        police_dict(dict):
+            警察の状態、pyxres内における座標、サイズを辞書化
+            #{0:[[status_x,y],[width,height]]}
+        self.danger(bool):
+            警察が来ているかの判定に使う
+        self.player_is_alive(bool):
+            ゲームオーバーの判定に使う
+        self.seed(int):
+            障害物の種類を後で参照するためにseed値を設定
+    """
+	    self.barrier_dict = {}
+        self.status_dict = {}
+        self.police_dict = {}
+
+        self.score
+        self.danger
+
+        self.ground_x
+        self.ground_y
+        
+        self.player_x 
+        self.player_y
+        
+        self.player_status
+        self.player_is_alive
+
+        self.barrier_x
+        self.barrier_y
+        self.barrier_vx
+
+        self.seed
+        self.barrier
+            
+        pyxel.load()
+        pyxel.run()
+
+	update():
+    """プレイヤー、障害物の位置、状態の更新を行う
+    update_player():
+        +キーによる行動
+            -KEY_UP:ボードに乗ったままジャンプ、オーリー
+            -KEY_DOWN:ボード上に横たわる、バック
+            -KEY_LEFT:前のボードをあげる、特に意味はないが、何か機能をつけたい
+            -KEY_RIGHT:後ろのボードをあげる、特に意味はないが、何か機能をつけたい
+            -SPACE:ボードをそのままに人のみジャンプ、ヒッピー
+        +その他
+            -自然な動きにするために、ランダム時間毎にプッシュ、板を足でおす動きを入れる
+            -障害物にぶつかると一回目は警察が来て、self.danger=Trueとなる
+            その後、一定時間後に普通の状態に戻る。
+    update_barrier():
+        三種類のランダムな障害物を生成する
+    update_police():
+        self.danger=Trueのとき警察を出動させる
+    """
+	    update_player():
+	    update_barrier():
+        update_police():
+
+	draw():
+    """プレイヤー、マップ(床)、障害物、行ってほしい行動のアナウンス、スコアを表示させる
+    
+    行ってほしい行動は'DO A OLLIE'や'DO A BACK'、'DO A HIPPIE'が表示される
+    障害物の左上に表示させる
+
+    左上にスコアを表示
+    """
+	    pyxel.blt() 
+	    pyxel.blt()	
+	    pyxel.blt()	
+	    pyxel.blt()	
+	    pyxel.blt()	
