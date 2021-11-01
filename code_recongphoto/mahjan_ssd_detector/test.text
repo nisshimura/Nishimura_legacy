@@ -1,4 +1,0 @@
-<annotation><folder>XXX</folder><filename>2017-10-18-22-16-18_4.jpg</filename><source><database>XXX</database>
-<annotation>XXX</annotation><image>XXX</image><flickrid>XXX</flickrid></source><owner><flickrid>XXX</flickrid><name>?</name></owner><size><width>512</width><height>512</height><depth>3</depth></size><segmented>0</segmented>
-<object><name>7p</name><pose>Unspecified</pose><truncated>0</truncated><difficult>1</difficult><bndbox><xmin>59</xmin><ymin>212</ymin><xmax>112</xmax><ymax>280</ymax></bndbox></object>
-...

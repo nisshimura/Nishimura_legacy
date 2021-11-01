@@ -1,5 +1,0 @@
-('C:\\Users\\github\\workspace\\jobcan_autotool\\exefile\\build\\testopenpyxl\\iniconfig-1.0.0-py3.7.egg',
- None,
- {'*.cp37-win_amd64.pyd', '*.pyw', 'EGG-INFO', '*.pyc', '*.pyd', '*.py'},
- 'DATA',
- [])

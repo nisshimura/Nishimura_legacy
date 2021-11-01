@@ -1,7 +1,0 @@
-('c:\\actions-runner\\_work\\_tool\\python\\3.7.8\\x64\\lib\\site-packages\\pyparsing-3.0.0a2-py3.7.egg',
- None,
- {'*.pyc', '*.pyd', '*.py', '*.pyw', 'EGG-INFO', '*.cp37-win_amd64.pyd'},
- 'DATA',
- [('pyparsing\\diagram\\template.jinja2',
-   'c:\\actions-runner\\_work\\_tool\\python\\3.7.8\\x64\\lib\\site-packages\\pyparsing-3.0.0a2-py3.7.egg\\pyparsing\\diagram\\template.jinja2',
-   'DATA')])

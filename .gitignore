@@ -5,3 +5,8 @@
 ./code_videoediter/ffmpeg/
 ./code_videoediter/mp4
 ./code_videoediter/mp3
+./code_linebot/
+!/./code_linebot/linebot.py
+!/./code_linebot/*.txt
+!/./code_linebot/Procfile
+

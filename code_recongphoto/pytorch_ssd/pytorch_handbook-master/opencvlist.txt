@@ -1,1 +1,0 @@
-C:\Users\ntaka\workspace\jobcan_autotool\code_recongphoto\pytorch_ssd_mahjan\VOCdevkit\BCCD\JPEGtemp\mahjan1.jpg 1  159  88  595  373
