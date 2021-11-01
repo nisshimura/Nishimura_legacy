@@ -1,0 +1,62 @@
+[ub604514@y12b009 06]$ ls -l
+合計 80
+-rw-r--r-- 1 ub604514 users  932  5月 14 11:41 accounting.txt
+-rw-r--r-- 1 ub604514 users 3313  5月 14 11:44 age.txt
+-rw-r--r-- 1 ub604514 users   73  5月 14 11:59 ex-sales-best1.txt
+-rw-r--r-- 1 ub604514 users  362  5月 14 11:45 head5.txt
+-rw-r--r-- 1 ub604514 users 3313  5月 14 11:44 height.txt
+-rw-r--r-- 1 ub604514 users  103  5月 14 11:38 hello-err-stderr.txt
+-rw-r--r-- 1 ub604514 users  139  5月 14 11:22 hello-err.py
+-rw-r--r-- 1 ub604514 users   45  5月 14 11:32 hello-stdout.txt
+-rw-r--r-- 1 ub604514 users   67  5月 14 11:37 hello-stdouterr.txt
+-rw-r--r-- 1 ub604514 users  140  5月 14 11:21 hello.py
+-rw-r--r-- 1 ub604514 users   22  5月 14 11:33 hellostdouterr.txt
+-rw-r--r-- 1 ub604514 users 3313  5月 14 11:42 male.txt
+-rw-r--r-- 1 ub604514 users 3313  5月 14 11:24 meibo.txt
+-rw-r--r-- 1 ub604514 users 3313  5月 14 11:43 name.txt
+-rw-r--r-- 1 ub604514 users  720  5月 14 11:51 name10.txt
+-rw-r--r-- 1 ub604514 users  364  5月 14 11:59 sales-elder.txt
+-rw-r--r-- 1 ub604514 users  362  5月 14 11:57 sales-elder5.txt
+-rw-r--r-- 1 ub604514 users  361  5月 14 11:45 tail5.txt
+-rw-r--r-- 1 ub604514 users  360  5月 14 11:41 tennis.txt
+-rw-r--r-- 1 ub604514 users  219  5月 14 11:52 worst3.txt
+[ub604514@y12b009 06]$ sort meibo.txt | head -n 10
+Aichi Jiro         General      38      Male    165     212      Tennis
+Akita Akiko        Research     50      Female  150     795      Travel
+Aomori Haruko      Accounting   30      Female  155      89      Music
+Chiba Mariko       General      46      Female  160     164      Reading
+Ehime Jiro         Research     37      Male    179     624      Driving
+Fukui Ichiro       Accounting   30      Male    181     949      Movie
+Fukuoka Fuyuko     Accounting   28      Female  156      80      Travel
+Fukushima Fuyuko   Sales        28      Female  166      95      Cooking
+Gunma Goro         General      58      Male    173     854      Ski
+Hiroshima Hachiro  Sales        36      Male    180      93      Climbing
+[ub604514@y12b009 06]$ sort -bnrk 7 meibo.txt | tail -n 3 sort -bnrk 7 meibo.txt | tail -n 3 
+Kagawa Ichiro      General      29      Male    168      75      Fishing
+Miyazaki Shichiro  Accounting   34      Male    175      72      Driving
+Osaka Shiro        Sales        31      Male    182      68      Driving
+[ub604514@y12b009 06]$ grep -i sales meibo.txt | sort -bnrk 4 | head -n 5
+ grep -i sales meibo.txt | sort -bnrk 4 | head -n 5
+Oita Rokuro        Sales        56      Male    168     180      Movie
+Shizuoka Haruko    Sales        55      Female  170     819      Travel
+Niigata Akiko      Sales        48      Female  152     720      Movie
+Kochi Saburo       Sales        39      Male    176     718      Driving
+Hiroshima Hachiro  Sales        36      Male    180      93      Climbing
+[ub604514@y12b009 06]$ grep -iv sales meibo.txt | sort -bnrk 7 | head -n 1
+Fukui Ichiro       Accounting   30      Male    181     949      Movie
+[ub604514@y12b009 06]$ wc -l meibo.txt 
+46 meibo.txt
+[ub604514@y12b009 06]$ grep -i Sales meibo.txt | wc -l 
+11
+[ub604514@y12b009 06]$ grep -i cooking meibo.txt | sort -bnrk 7 
+Kumamoto Goro      General      57      Male    175     821      Cooking
+Tottori Fuyuko     Research     44      Female  162     687      Cooking
+Iwate Natsuko      Sales        25      Female  163     635      Cooking
+Yamanashi Jiro     General      26      Male    169      99      Cooking
+Fukushima Fuyuko   Sales        28      Female  166      95      Cooking
+[ub604514@y12b009 06]$
+[ub604514@y12b009 06]$ grep -iv sales meibo.txt | sort -bnk 4 | head -n 1
+Hokkaido Ichiro	   General      24      Male    167     290      Reading
+[ub604514@y12b009 06]$ grep -iv sales meibo.txt | grep -iv accounting | sort -bnk 4 | tail -n 1
+Gunma Goro         General      58      Male    173     854      Ski
+[ub604514@y12b009 06]$ 

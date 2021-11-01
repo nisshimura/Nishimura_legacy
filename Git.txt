@@ -1,0 +1,18 @@
+### git 
+
+cd workspace\jobcan_autotool\
+
+    -git status
+    -git diff 
+    -git add <filepath>
+    -git commit -m "change~~"
+    -git push origin master
+    -git pull origin master
+
+cd workspace\sophia_webcap
+    クローンを作る      -git clone URL    
+    ブランチを確認      -git branch nishimura/ 
+    ブランチを作る      -git checkout -b nishimura/
+    ブランチを変更する  -git checkout nishimura/
+    クローンを最新に    -git fetch
+    ブランチを最新に    -git pull origin nishimura/

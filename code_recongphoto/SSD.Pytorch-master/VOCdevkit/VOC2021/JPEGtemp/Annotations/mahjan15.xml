@@ -1,0 +1,186 @@
+<annotation>
+<filename>mahjan15.jpg</filename>
+<source>
+    <database>original</database>
+    <annotation>original</annotation>
+    <image>XXX</image>
+    <flickrid>0</flickrid>
+</source>
+<owner>
+    <flickrid>0</flickrid>
+    <name>?</name>
+</owner>
+    <size>
+        <width> 1920</width>
+        <height> 1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>1wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 660</xmin>
+            <ymin> 508</ymin>
+            <xmax> 736</xmax>
+            <ymax> 631</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>1wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 739</xmin>
+            <ymin> 487</ymin>
+            <xmax> 811</xmax>
+            <ymax> 604</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>2wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 818</xmin>
+            <ymin> 460</ymin>
+            <xmax> 885</xmax>
+            <ymax> 578</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>4wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 888</xmin>
+            <ymin> 444</ymin>
+            <xmax> 962</xmax>
+            <ymax> 564</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>2pin</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 960</xmin>
+            <ymin> 429</ymin>
+            <xmax> 1032</xmax>
+            <ymax> 535</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>3pin</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1022</xmin>
+            <ymin> 410</ymin>
+            <xmax> 1089</xmax>
+            <ymax> 518</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>4sou</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1087</xmin>
+            <ymin> 384</ymin>
+            <xmax> 1147</xmax>
+            <ymax> 499</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>5sou</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1147</xmin>
+            <ymin> 372</ymin>
+            <xmax> 1204</xmax>
+            <ymax> 475</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>6sou</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1209</xmin>
+            <ymin> 350</ymin>
+            <xmax> 1260</xmax>
+            <ymax> 456</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>ton</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1262</xmin>
+            <ymin> 340</ymin>
+            <xmax> 1320</xmax>
+            <ymax> 453</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>ton</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1315</xmin>
+            <ymin> 326</ymin>
+            <xmax> 1372</xmax>
+            <ymax> 420</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>7wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1372</xmin>
+            <ymin> 304</ymin>
+            <xmax> 1418</xmax>
+            <ymax> 410</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>9wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1423</xmin>
+            <ymin> 297</ymin>
+            <xmax> 1468</xmax>
+            <ymax> 388</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>1pin</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1478</xmin>
+            <ymin> 285</ymin>
+            <xmax> 1524</xmax>
+            <ymax> 376</ymax>
+        </bndbox>
+    </object>
+</annotation>
