@@ -1,14 +1,14 @@
 from typing import Tuple
 import pyxel
 import math  # math.floorを使うので必要
-from random import randint
+from random import randint, randrange
 import time
 
 class App:
     def __init__(self):
-        self.b_d = {0: [[48, 18], [16, 14], [32, 32], [16, 16]],  #OLLIE
-                             1: [[32, 19], [16, 13], [48, 32], [16, 16]],   #HIPPIE
-                             2: [[64, 32], [16, 32], [0, 48], [16, 16]]    #BACK
+        self.b_d = {0: [[48, 18], [16, 14], [32, 32], [16, 16],0],  #OLLIE
+                             1: [[32, 19], [16, 13], [48, 32], [16, 16],0],   #HIPPIE
+                             2: [[64, 32], [16, 24], [0, 48], [16, 16],8]    #BACK
                              }
         self.s_d = {0: [[0, 0], [16, 16]],  #normal
                             1: [[0, 16], [16, 16]], #jump with board
@@ -42,6 +42,7 @@ class App:
         
         self.player_x = pyxel.width/5
         self.player_y = self.ground_y-16
+        self.player_vy = 0
         self.p_s = 0
 
         self.gameover = False
@@ -59,7 +60,8 @@ class App:
         self.barriers = []
         for i in range(3):
             seed = randint(0, 2)
-            self.barriers.append([i*randint(50, 80), self.ground_y-self.b_d[seed][1][1], seed])
+            self.barriers.append(
+                [i*randrange(90,100,10), self.ground_y-self.b_d[seed][1][1]-self.b_d[seed][4], seed])
 
         pyxel.load("./img/skate.pyxres")
         pyxel.run(self.update, self.draw)
@@ -72,12 +74,14 @@ class App:
         self.update_frame()
         self.update_score()
         self.update_police()
+        if not pyxel.frame_count%5 == 1:
+            self.update_jump()
 
         for i, v in enumerate(self.barriers):
             self.barriers[i] = self.update_barrier(*v)
         self.update_player()
         for index in self.barriers:
-            self.update_danger(index[2], index[1], index[0])
+            self.update_danger(index[2], index[0], index[1])
 
         if pyxel.btn(pyxel.KEY_BACKSPACE):
             self.gameover = True
@@ -97,9 +101,6 @@ class App:
         self.muteki_time = 0
 
     def update_danger(self, seed, barrier_x, barrier_y):
-        if self.is_crashed(self.s_d, self.p_s, self.player_x, self.player_y, self.b_d, seed, barrier_x, barrier_y):
-            print('a')
-            pass
         if self.is_crashed(self.s_d, self.p_s, self.player_x, self.player_y, self.b_d,seed, barrier_x, barrier_y) and self.danger:
             self.gameover = True
             self.draw_gameover()
@@ -129,15 +130,21 @@ class App:
             self.elpasedtime += 1
 
     def update_player(self):
-        if pyxel.btn(pyxel.KEY_UP) or pyxel.btn(pyxel.GAMEPAD_1_UP):
+        
+        if self.elpasedtime < 1:
+            self.muteki = True
+        if pyxel.btn(pyxel.KEY_UP) or pyxel.btn(pyxel.GAMEPAD_1_UP) and self.player_vy == 0 and self.player_y == self.ground_y-self.s_d[self.p_s][1][1]:
             self.p_s = 1
-            self.player_y += -1
-
+            if self.player_y == self.ground_y-self.s_d[self.p_s][1][1]:
+                self.player_vy += -32
+            if self.player_vy < -32:
+                self.player_vy = -32
         if pyxel.btn(pyxel.KEY_DOWN) or pyxel.btn(pyxel.GAMEPAD_1_DOWN):
             if self.player_y >= self.ground_y-16:
                 self.p_s = 6
                 self.player_y = self.ground_y-8
-            self.player_y += 1
+            if self.player_vy >= 0:
+                self.player_y += 1
             
         if pyxel.btn(pyxel.KEY_SPACE):
             self.p_s = 2
@@ -164,6 +171,18 @@ class App:
             if self.elpasedtime % 7 == 3 and self.frame == 30 and self.player_y == self.ground_y-self.s_d[self.p_s][1][1]:
                 self.p_s = 0
                 self.draw_player()
+        
+    def update_jump(self):
+        if not self.player_y == self.ground_y-self.s_d[self.p_s][1][1] or not self.player_vy == 0:
+            if self.player_vy < 0:
+                self.player_y -= 1
+                self.player_vy += 1
+            
+            if self.player_vy >= 0:
+                self.player_y += 1
+            if self.player_y == self.ground_y-self.s_d[self.p_s][1][1]:
+                self.player_vy = 0
+                
     def update_barrier(self, x, y, seed):
 
         x -= 1
@@ -171,7 +190,7 @@ class App:
         if x < -40:
             seed = randint(0, 2)
             x += 240
-            y = self.ground_y-self.b_d[seed][1][1]
+            y = self.ground_y-self.b_d[seed][1][1]-self.b_d[seed][4]
 
         return x, y, seed
 
@@ -194,9 +213,7 @@ class App:
             pyxel.blt(self.ground_x, self.ground_y, 0,
                     self.b_g[1][0][0], self.b_g[1][0][1], self.b_g[1][1][0], self.b_g[1][1][1])
             #障害物
-            for x,y,seed in self.barriers:
-                pyxel.blt(x, y, 0, self.b_d[seed][0][0], self.b_d[seed]
-                          [0][1], self.b_d[seed][1][0], self.b_d[seed][1][1])
+            self.draw_barrier()
             #文字
             for x, y, seed in self.barriers:
                 pyxel.blt(x-16, y-32, 0, self.b_d[seed][2][0], self.b_d[seed]
@@ -216,14 +233,17 @@ class App:
         if self.danger == True:
             pyxel.blt(self.police_x, self.police_y, 0,
                       self.p_d[self.police_status][0][0], self.p_d[self.police_status][0][1], self.p_d[self.police_status][1][0], self.p_d[self.police_status][1][1])
-
+    def draw_barrier(self):
+            for x, y, seed in self.barriers:
+                pyxel.blt(x, y, 0, self.b_d[seed][0][0], self.b_d[seed]
+                          [0][1], self.b_d[seed][1][0], self.b_d[seed][1][1])
     def draw_gameover(self):
         pyxel.cls(0)
         pyxel.text(60, 40, 'GAME OVER', 7)
         pyxel.text(40, 60, 'PRESS ENTER TO RESTART', 7)
 
-    def is_Onground(self, player_y):
-        if player_y == self.ground_y-self.s_d[self.p_s][1][1]:
+    def is_Onground(self):
+        if self.player_y == self.ground_y-self.s_d[self.p_s][1][1]:
             return True
         else:
             return False
@@ -242,11 +262,25 @@ class App:
     def is_crashed(self, target, status, player_x, player_y, enemy, e_status, barrier_x, barrier_y):
         if self.muteki:
             return False 
+        if player_x < 0:
+            player_x = 0
+        if barrier_x < 0:
+            barrier_x = 0
         for i in [1,0]:
             for j in [1,0]:
-                if player_x+target[status][1][0]*i in [index for index in range(barrier_x, barrier_x+enemy[e_status][1][0]+1)]:
-                    if player_y+target[status][1][1]*j in [index for index in range(barrier_y, barrier_y+enemy[e_status][1][1]+1)]:
-                        return True
-         
+                print(barrier_x)
+                print(barrier_x+enemy[e_status][1][0]+1)
+                print(player_x)
+
+                if barrier_x+enemy[e_status][1][0]+1 > barrier_x:
+                    if player_x+target[status][1][0]*i in [index for index in range(barrier_x, barrier_x+enemy[e_status][1][0]+1)]:
+                        if player_y+target[status][1][1]*j in [index for index in range(barrier_y, barrier_y+enemy[e_status][1][1]-enemy[e_status][4]+1)]:
+                            return True
+                if barrier_x+enemy[e_status][1][0]+1 < barrier_x:
+                    if player_x+target[status][1][0]*i in [index for index in range(barrier_x, barrier_x+enemy[e_status][1][0]+1)]:
+                        if player_y+target[status][1][1]*j in [index for index in range(barrier_y, barrier_y+enemy[e_status][1][1]-enemy[e_status][4]+1)]:
+                            return True
+        return False
+
 App()
 
