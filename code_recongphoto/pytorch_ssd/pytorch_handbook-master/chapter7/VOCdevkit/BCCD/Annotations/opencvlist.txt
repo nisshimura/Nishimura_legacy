@@ -1,1 +1,0 @@
-C:\Users\ntaka\workspace\jobcan_autotool\code_recongphoto\pytorch_ssd\pytorch_handbook-master\chapter7\VOCdevkit\BCCD\JPEGImages\BloodImage_00000.jpg 4  22  331  76  472  82  314  127  440  128  285  180  412  320  186  360  303
