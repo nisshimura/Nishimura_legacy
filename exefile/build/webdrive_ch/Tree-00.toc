@@ -1,5 +1,0 @@
-('c:\\actions-runner\\_work\\_tool\\python\\3.7.8\\x64\\lib\\site-packages\\urllib3-1.25.9-py3.7.egg',
- None,
- {'*.pyw', '*.cp37-win_amd64.pyd', '*.pyd', '*.pyc', 'EGG-INFO', '*.py'},
- 'DATA',
- [])
