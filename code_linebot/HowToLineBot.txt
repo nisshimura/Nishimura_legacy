@@ -1,0 +1,22 @@
+python version 3.9.7 
+
+https://devcenter.heroku.com/articles/python-support
+
+command
+git init 
+git add .
+git commit -m 'add linebot'
+git push heroku master
+
+heroku ps:scale web=1
+heroku restart --app fcvanilla
+heroku logs --tail -a fcvanilla
+
+###heroku 
+heroku login --interactive
+ntakayki01tak@gmail.com
+Takayuki1763,
+###rename 
+heroku rename 新しい名前
+###herokuと紐づけ
+heroku git:remote -a fcvanilla
