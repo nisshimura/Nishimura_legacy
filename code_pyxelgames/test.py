@@ -15,3 +15,6 @@ s_d = {0: [[0, 0], [16, 16]],  # normal
 
 k = 10
 print(s_d[k])
+
+for i in range(-1,3):
+    print(i)

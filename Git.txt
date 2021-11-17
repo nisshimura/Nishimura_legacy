@@ -16,3 +16,13 @@ cd workspace\sophia_webcap
     ブランチを変更する  -git checkout nishimura/
     クローンを最新に    -git fetch
     ブランチを最新に    -git pull origin nishimura/
+
+作業ブランチにマスターの内容を持ってくる
+# masterブランチへ移動
+git checkout master
+# git pullでmasterを最新に
+git pull origin master
+# 開発用ブランチへ移動
+git checkout 開発用ブランチ
+# mergeコマンドでmaserの内容を取り込む
+git merge origin master

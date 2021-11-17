@@ -1,19 +1,18 @@
 #include <stdio.h>
 float calc(float a,float b,char c) {  
     float result;
-    // if (c="+") {
-    //     result = a + b;
-    // }else if (c=="-") {
-    //     result = a - b;
-    // }else if (c=="*") {
-    //     result = a * b;
-    // }else if (c=="/") {
-    //     if (a==0 || b==0){
-    //         return 0;
-    //     }
-    //     result = a / b;
-    // }
-    result  = a 
+    if (c=='+') {
+        result = a + b;
+    }else if (c=='-') {
+        result = a - b;
+    }else if (c=='*') {
+        result = a * b;
+    }else if (c=='/') {
+        if (a==0 || b==0){
+            return 0;
+        }
+        result = a / b;
+    }
     return result;
 }
 

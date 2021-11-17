@@ -8,7 +8,7 @@ class adobe_trial():
     def __init__(self):
         self.url = "https://account.adobe.com/plans/4552B659FED96B82A33A/cancel-plan"
         self.wait_time = 10
-        self.path = "../driver/chromedriver_win90.exe"
+        self.path = "../driver/chromedriver_win94.exe"
         self.login_id = "ntakayki01@mineo.jp"
         self.login_pw = "Melton1763"
         self.driver = webdriver.Chrome(executable_path=self.path)
@@ -45,7 +45,7 @@ class adobe_trial():
         except:
             driver.close()
             time.sleep(3600)
-            return False
+            return False                                            
 
     def get_trial(self):
         driver = self.driver

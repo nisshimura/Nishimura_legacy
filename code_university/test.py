@@ -1,20 +1,16 @@
-a = "abcdef"[-1]
-b = "atesstt"[::2]
-c = "ttestt"[1:-1]
-d = "testtest"[::2]
-e = "tteesst"[1::2] + "t"
-print(a)
-print(b)
-print(c)
-print(d)
-print(e)
-
-s = [1,2 ,3,4,5,]
-for i in s:
-    if i == 2:
-        break
-    print(i)
 
 
-x = 'abcdef'
-print(x[lme:len(x)])
+# x = 10
+# def func(x):
+#     def func2(y):
+#         x = y-1
+#     func2(x)
+#     return x
+# print(func(x))
+
+# list = [1,2,3,4]
+# list.pop()
+# list.del(3)
+# print(list)
+
+x = '1' + 2

@@ -1,0 +1,10 @@
+midtext()
+{
+    lines=$(cat "$1" | wc -l)
+    if [ $((lines % 2 )) -eq 0 ] ;then
+        sed -n "$((lines / 2)),+1p" "$1"
+    else
+        sed -n "$(((lines / 2) + 1))p" "$1"
+    fi
+}
+
