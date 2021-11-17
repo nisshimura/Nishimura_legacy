@@ -8,14 +8,16 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
+    MessageEvent, TextMessage, TextSendMessage, messages,
 )
 import os
 import csv
 import re
 import boto3
 import json
+import io
 import pandas as pd
+
 
 
 class VanillaAws():
@@ -25,13 +27,13 @@ class VanillaAws():
 
     def build(self,bucket_num=0):
         s3 = boto3.resource('s3',
-        aws_access_key_id='AKIAZWQEDAZ6UXHQBQWH',
-        aws_secret_access_key='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',
+        aws_access_key_id='',
+        aws_secret_access_key='',
         region_name='ap-northeast-1')
         self.bucket  = s3.Bucket(self.list_bucket_name[bucket_num])
 
     def get_csv(self,csv_name):
-        body = self.bucket.Object(csv_name).get()['Body'].read().decode("utf-8-sig")
+        body = self.bucket.Object(csv_name).get()['Body'].read().decode("utf-8-sig").replace('\r\n','\n')
         return body
     
     def get_command(self,json_name):
@@ -40,14 +42,20 @@ class VanillaAws():
         return body_dic
     
     def put_csv(self,key,df):
-        df_csv = df.to_csv(header=False)
-        self.bucket.Object(key).put(Body=df_csv.encode('utf-8-sig'))
-        return True
+        try:
+            df_csv = df.to_csv(header=False)
+            self.bucket.Object(key).put(Body=df_csv.encode('utf-8-sig'))
+            return True
+        except:
+            return False
 
     def edit_csv(self,csv_name,target):
         body = self.get_csv(csv_name)
+        print(body)
         df = pd.read_csv(io.StringIO(body),lineterminator='\n',header=None).set_index(0)
-        df.at[target,1] = 'ok\r'
+        print(df)
+        df.at[target,1] = 'ok'
+        print(df)
         return df
 
         
@@ -57,26 +65,25 @@ class VanillaBot(VanillaAws):
         super().__init__()
         self.command_dic = {}
         self.command_list = []
-        self.teikei_list = ['\n以上の方の納入が確認できてません。不明点等ありましたら@西村喬行までご連絡ください。','対象者はいません。','変更が完了しました']
+        self.teikei_list = ['\n以上の方の納入が確認できてません。不明点等ありましたら@西村喬行までご連絡ください。','対象者はいません。','変更が完了しました','変更できませんでした']
 
     def is_Command(self,message):
         command = [i for i in self.command_list if i in message]
         if len(command) == 0:
-            return False
+            return False,False
         return True,command[0]
 
     def get_text(self,message):
         output_text = ''
         
         if message=='!help':
-            for i in self.commnad_list.keys():
-                if i == len(self.command_list.keys()):
+            for i in self.command_list:
+                if i == len(self.command_list):
                     output_text += i
                 else:
                     output_text += i + ','
-
         else:
-            body = self.get_csv(self,self.command_dic[message]).splitlines()
+            body = self.get_csv(self.command_dic[message]).splitlines()
             body_list = [i.split(',') for i in body]
             crimer_list = [i[0] for i in body_list if not 'ok' in i]
 
@@ -124,15 +131,19 @@ def callback():
 
 
 @handler.add(MessageEvent, message=TextMessage)
-def handle_message(event)
+def handle_message(event):
     reply = event.message.text
-    if work.is_Command(reply)[0]:
+    iscommand,target = work.is_Command(reply)
+    if iscommand:
         if reply in work.command_list:
             line_bot_api.reply_message(event.reply_token,TextSendMessage(text=work.get_text(reply)))
         else:
-            df = work.edit_csv(work.command_dic[work.is_Command(reply)[1]],reply.replace(work.is_Command(message)[1]+'　',''))
-            work.put_csv(work.command_dic[work.is_Command(reply)[1]],df)
-            line_bot_api.reply_message(event.reply_token,TextSendMessage(text=work.teikei_list[2]))
+            df = work.edit_csv(work.command_dic[target],reply.replace(target+'　',''))
+            if work.put_csv(work.command_dic[target],df):
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=work.teikei_list[2]))
+            else:
+                line_bot_api.reply_message(event.reply_token,TextSendMessage(text=work.teikei_list[3]))
+
 
     else:
         pass
