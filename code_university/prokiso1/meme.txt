@@ -1,0 +1,8 @@
+https://www.raspberrypirulo.net/entry/opencv#%E9%A1%94%E8%AA%8D%E8%A8%BC%E3%81%99%E3%82%8Bpython%E3%82%B3%E3%83%BC%E3%83%89
+curl -kL https://bootstrap.pypa.io/get-pip.py | python
+curl -O https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+unxz -c ffmpeg-release-amd64-static.tar.xz | tar xvf -
+export PATH=~/ffmpeg-4.3.1-amd64-static:$PATH
+which ffmpeg ~/ffmpeg-4.3.1-amd64-static/ffmpeg
+ffmpeg -version ffmpeg version 4.3.1-static https://johnvansickle.com/ffmpeg/ Copyright (c) 2000-2020 the FFmpeg developers
+https://stackoverflow.com/questions/58585037/oserror-errno-8-exec-format-error-chromedriver-using-chromedriver-on-ubunt

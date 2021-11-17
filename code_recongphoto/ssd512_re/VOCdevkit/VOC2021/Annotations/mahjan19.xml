@@ -1,0 +1,136 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>mahjan19.jpg</filename>
+    <path>mahjan_detect-PascalVOC-export/Annotations/mahjan19.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1920</width>
+        <height>1080</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>sha</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>594.1281874569263</xmin>
+        <ymin>578.5064338235294</ymin>
+        <xmax>670.8752584424535</xmax>
+        <ymax>696.3005514705882</ymax>
+    </bndbox>
+</object><object>
+    <name>4p</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>677.4913852515507</xmin>
+        <ymin>554.6829044117646</ymin>
+        <xmax>752.9152308752584</xmax>
+        <ymax>669.829963235294</ymax>
+    </bndbox>
+</object><object>
+    <name>5pr</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>755.5616815988974</xmin>
+        <ymin>533.5064338235294</ymin>
+        <xmax>828.3390764989663</xmax>
+        <ymax>638.0652573529412</ymax>
+    </bndbox>
+</object><object>
+    <name>4s</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>828.3390764989663</xmin>
+        <ymin>504.38878676470586</ymin>
+        <xmax>894.500344589938</xmax>
+        <ymax>612.9181985294117</ymax>
+    </bndbox>
+</object><object>
+    <name>ton</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>902.4396967608546</xmin>
+        <ymin>488.5064338235294</ymin>
+        <xmax>961.9848380427292</xmax>
+        <ymax>590.4181985294117</ymax>
+    </bndbox>
+</object><object>
+    <name>2m</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>965.9545141281875</xmin>
+        <ymin>459.38878676470586</ymin>
+        <xmax>1028.1461061337009</xmax>
+        <ymax>567.9181985294117</ymax>
+    </bndbox>
+</object><object>
+    <name>2m</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>1034.7622329427982</xmin>
+        <ymin>442.1829044117647</ymin>
+        <xmax>1094.3073742246727</xmax>
+        <ymax>541.4476102941177</ymax>
+    </bndbox>
+</object><object>
+    <name>4s</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>1100.92350103377</xmin>
+        <ymin>419.6829044117647</ymin>
+        <xmax>1153.8525155065474</xmax>
+        <ymax>520.2711397058823</ymax>
+    </bndbox>
+</object><object>
+    <name>team_drivens</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>1151.2060647829085</xmin>
+        <ymin>567.9181985294117</ymin>
+        <xmax>1435.699517574087</xmax>
+        <ymax>700.2711397058823</ymax>
+    </bndbox>
+</object><object>
+    <name>hand_ton_3</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>48.95933838731909</xmin>
+        <ymin>31.88878676470588</ymin>
+        <xmax>263.32184700206756</xmax>
+        <ymax>119.24172794117646</ymax>
+    </bndbox>
+</object><object>
+    <name>round_1</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>269.93797381116474</xmin>
+        <ymin>80.859375</ymin>
+        <xmax>420.7856650585803</xmax>
+        <ymax>116.59466911764706</ymax>
+    </bndbox>
+</object>
+</annotation>

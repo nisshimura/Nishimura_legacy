@@ -1,0 +1,14 @@
+<annotation>
+	<folder>train2017</folder>
+	<filename>mahjan1.jpg</filename>
+	<path>G:\ntaka\workspace\jobcan_autotool\code_recongphoto\yolov5-master\coco128\images\train2017\mahjan1.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

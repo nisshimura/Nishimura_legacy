@@ -1,0 +1,600 @@
+{
+    "name": "mahjan_detect",
+    "securityToken": "mahjan_detect Token",
+    "sourceConnection": {
+        "name": "mahjan_image",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNTBlYjU0Y2ExZGFhYjM5OGM0MjM0NjU0ODhhMzA3Yzk2YjM5MjIxNDcwYzg2YWNkY2IwMDVhMzAxNjhhMDI4OTgyNDYwOTU3YzFkYWQ5NDc0ZTYwYWJjMTdhM2I0YjE5MjM0YzE3N2QxNzdlNGE2OWZlODdiNDY1MzRjYzc1Njk1YTNlMjUxYzkxYTUwYmQ3NDZlNTFlMzUyM2Q4OTNmOTA5YWMzYzdlYWQzYTIzZmExNGNiYmM1ZWRhOWY2YzkwYzk3YzkxZDk0YTM1MWNlMGIyNWFiY2Y3MDgwZGJiMmNiOTE4M2M2MTFlOGIzMTNkNGU5MGU2OWM5ZDBkNjNjMWI5NDE5Zjg4Mzc1MzM4Mjc1ZGVlOTVkNzQzY2VkMmI2IiwiaXYiOiI1ZjhlYjE2ZDQ4YjIxMzdhY2IwMTJmMzcyZWFkMGM3ODk1ZTIyMWFjYWE3Mjg0MWIifQ=="
+        },
+        "id": "hVq_3dD2U"
+    },
+    "targetConnection": {
+        "name": "vott_datas",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzBmYjIwYmE4NDIzZjgyNDg0OTYzMmIzOGU3YTdmYjFiMGU5ZTc4MDA5NDVjMmM3OWM1ZmJiNzQ3YTAwMjg2OGNiNjdhN2FiZWJmM2U4MGRjOTgwZDVhMjRhMmYyYjRkOTU4MGM3ZmI5OWE3MWQ5Mjk3NjczOGQ5NTYwODQ5Yzk2NTM1ZDEwYWI0ODUyY2Q3MTczNjgwYmIxMWQxZDg1NGRhNzNhODU0ODMyYTE2NjkwZDEyZWU4MzkxOWFiMTBmZGVkODRhM2MzMzFkZjI3NWY5YTcyNjgyMTVjN2Q1ODQ4YzY4MjIyYWRjNzVjM2QxMjdkNWQyNjZiN2QwODMwNTJjZDZiNTU1NzdkNjZjMjVkMDcyZTk2YWY2NWZlZTI2IiwiaXYiOiJiYTY0MzU0MjYxYzU0OGI4YmM0NGI2MGJiMjVlZTk3NGJjMTNlYTUwM2RmNTJmZDMifQ=="
+        },
+        "id": "A2RUMu4ut"
+    },
+    "videoSettings": {
+        "frameExtractionRate": 15
+    },
+    "tags": [
+        {
+            "name": "1p",
+            "color": "#5db300"
+        },
+        {
+            "name": "2p",
+            "color": "#e81123"
+        },
+        {
+            "name": "3p",
+            "color": "#6917aa"
+        },
+        {
+            "name": "4p",
+            "color": "#015cda"
+        },
+        {
+            "name": "5p",
+            "color": "#4894fe"
+        },
+        {
+            "name": "5pr",
+            "color": "#6b849c"
+        },
+        {
+            "name": "6p",
+            "color": "#70c400"
+        },
+        {
+            "name": "7p",
+            "color": "#f7929a"
+        },
+        {
+            "name": "8p",
+            "color": "#257ffe"
+        },
+        {
+            "name": "9p",
+            "color": "#ddabe9"
+        },
+        {
+            "name": "1m",
+            "color": "#ff8c00"
+        },
+        {
+            "name": "2m",
+            "color": "#386300"
+        },
+        {
+            "name": "3m",
+            "color": "#b40e1b"
+        },
+        {
+            "name": "4m",
+            "color": "#68217a"
+        },
+        {
+            "name": "5m",
+            "color": "#33cccc"
+        },
+        {
+            "name": "5mr",
+            "color": "#016afe"
+        },
+        {
+            "name": "6m",
+            "color": "#595959"
+        },
+        {
+            "name": "7m",
+            "color": "#808080"
+        },
+        {
+            "name": "8m",
+            "color": "#990066"
+        },
+        {
+            "name": "9m",
+            "color": "#00bcf2"
+        },
+        {
+            "name": "1s",
+            "color": "#5db300"
+        },
+        {
+            "name": "2s",
+            "color": "#e81123"
+        },
+        {
+            "name": "3s",
+            "color": "#6917aa"
+        },
+        {
+            "name": "4s",
+            "color": "#015cda"
+        },
+        {
+            "name": "5s",
+            "color": "#4894fe"
+        },
+        {
+            "name": "5sr",
+            "color": "#6b849c"
+        },
+        {
+            "name": "6s",
+            "color": "#70c400"
+        },
+        {
+            "name": "7s",
+            "color": "#f7929a"
+        },
+        {
+            "name": "8s",
+            "color": "#257ffe"
+        },
+        {
+            "name": "9s",
+            "color": "#ddabe9"
+        },
+        {
+            "name": "ton",
+            "color": "#ff8c00"
+        },
+        {
+            "name": "nan",
+            "color": "#386300"
+        },
+        {
+            "name": "sha",
+            "color": "#b40e1b"
+        },
+        {
+            "name": "pei",
+            "color": "#68217a"
+        },
+        {
+            "name": "haku",
+            "color": "#33cccc"
+        },
+        {
+            "name": "hatsu",
+            "color": "#016afe"
+        },
+        {
+            "name": "chun",
+            "color": "#595959"
+        },
+        {
+            "name": "hand_ton_1",
+            "color": "#808080"
+        },
+        {
+            "name": "hand_ton_2",
+            "color": "#990066"
+        },
+        {
+            "name": "hand_ton_3",
+            "color": "#00bcf2"
+        },
+        {
+            "name": "hand_ton_4",
+            "color": "#5db300"
+        },
+        {
+            "name": "hand_nan_1",
+            "color": "#e81123"
+        },
+        {
+            "name": "hand_nan_2",
+            "color": "#6917aa"
+        },
+        {
+            "name": "hand_nan_3",
+            "color": "#015cda"
+        },
+        {
+            "name": "hand_nan_4",
+            "color": "#4894fe"
+        },
+        {
+            "name": "round_0",
+            "color": "#6b849c"
+        },
+        {
+            "name": "round_1",
+            "color": "#70c400"
+        },
+        {
+            "name": "round_2",
+            "color": "#f7929a"
+        },
+        {
+            "name": "round_3",
+            "color": "#257ffe"
+        },
+        {
+            "name": "round_4",
+            "color": "#ddabe9"
+        },
+        {
+            "name": "round_5",
+            "color": "#ff8c00"
+        },
+        {
+            "name": "round_6",
+            "color": "#386300"
+        },
+        {
+            "name": "round_7",
+            "color": "#b40e1b"
+        },
+        {
+            "name": "round_8",
+            "color": "#68217a"
+        },
+        {
+            "name": "round_9",
+            "color": "#33cccc"
+        },
+        {
+            "name": "team_drivens",
+            "color": "#016afe"
+        },
+        {
+            "name": "team_exfurinkazan",
+            "color": "#595959"
+        },
+        {
+            "name": "team_kadokawa",
+            "color": "#808080"
+        },
+        {
+            "name": "team_konami",
+            "color": "#990066"
+        },
+        {
+            "name": "team_abemas",
+            "color": "#00bcf2"
+        },
+        {
+            "name": "team_segasammy",
+            "color": "#5db300"
+        },
+        {
+            "name": "team_raiden",
+            "color": "#e81123"
+        },
+        {
+            "name": "team_pirates",
+            "color": "#6917aa"
+        },
+        {
+            "name": "不明",
+            "color": "#015cda"
+        },
+        {
+            "name": "sink",
+            "color": "#4894fe"
+        }
+    ],
+    "id": "1hucuE8Gu",
+    "activeLearningSettings": {
+        "modelPathType": "coco",
+        "autoDetect": true,
+        "predictTag": true
+    },
+    "exportFormat": {
+        "providerType": "pascalVOC",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNjIyZDNkNWUzODk2NzdkNWE1OTY2ZjM2ODkxNGI4OTE5MGE3MDY5Zjc2YmFkNDg4YTAwODk4MDFlYzZmZWI3M2ZmN2EwZTY4NGQyYzg5NTljZWFiMjZjYzVmYjZhZTY2NmZjNjk3NmM1MjYxYTBlZjA1ZDI3ZWVmYzgwZWU5NzU2NWYwYWVjNjMwODAzZTNiNTc2NDA3NzY1MzM5NTY2ZiIsIml2IjoiYmI4ZDRhMjljZTIyN2UwMzMxNThmMjUyYzMyNWJlOTFiY2Q1NGU0Nzk5ZTc3ODk5In0="
+        }
+    },
+    "version": "2.2.0",
+    "lastVisitedAssetId": "a290fe758910b25b0082d430bd75d7e2",
+    "assets": {
+        "fdcbf248b5c8722b3b419701fff6a665": {
+            "format": "jpg",
+            "id": "fdcbf248b5c8722b3b419701fff6a665",
+            "name": "mahjan1.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan1.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "8c3bfb97073d0639e83fd1a5f4f75294": {
+            "format": "jpg",
+            "id": "8c3bfb97073d0639e83fd1a5f4f75294",
+            "name": "mahjan10.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan10.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "1aa13b2b3c7b57e19fc8b3ee6eec78b8": {
+            "format": "jpg",
+            "id": "1aa13b2b3c7b57e19fc8b3ee6eec78b8",
+            "name": "mahjan11.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan11.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "be42189e4d17053c4af87e54a4d77813": {
+            "format": "jpg",
+            "id": "be42189e4d17053c4af87e54a4d77813",
+            "name": "mahjan12.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan12.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "7ed65f6daa30843a3dbd9275ac4d8600": {
+            "format": "jpg",
+            "id": "7ed65f6daa30843a3dbd9275ac4d8600",
+            "name": "mahjan13.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan13.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "0b8f4f3c7d7294090b71214a38718df1": {
+            "format": "jpg",
+            "id": "0b8f4f3c7d7294090b71214a38718df1",
+            "name": "mahjan14.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan14.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "eaa4fff04a0b92d1a3232cc6734150f2": {
+            "format": "jpg",
+            "id": "eaa4fff04a0b92d1a3232cc6734150f2",
+            "name": "mahjan15.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan15.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "adbdd7f46a33c830c7fabe1fb32afc46": {
+            "format": "jpg",
+            "id": "adbdd7f46a33c830c7fabe1fb32afc46",
+            "name": "mahjan16.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan16.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "2b234253a4eb4b5d79b6029b90983d2f": {
+            "format": "jpg",
+            "id": "2b234253a4eb4b5d79b6029b90983d2f",
+            "name": "mahjan17.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan17.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "81b22eae83e7dd70c85bc68751442e44": {
+            "format": "jpg",
+            "id": "81b22eae83e7dd70c85bc68751442e44",
+            "name": "mahjan18.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan18.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "f162a26a7b4265a19a201d814bc0e340": {
+            "format": "jpg",
+            "id": "f162a26a7b4265a19a201d814bc0e340",
+            "name": "mahjan19.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan19.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "f2a8a0aac640e2e2a56aee277a9bec74": {
+            "format": "jpg",
+            "id": "f2a8a0aac640e2e2a56aee277a9bec74",
+            "name": "mahjan2.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan2.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "fed7b31cd6a69c974c8f54682e3ab452": {
+            "format": "jpg",
+            "id": "fed7b31cd6a69c974c8f54682e3ab452",
+            "name": "mahjan20.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan20.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "b388e3dd75b17230ef44e81d73a5dff1": {
+            "format": "jpg",
+            "id": "b388e3dd75b17230ef44e81d73a5dff1",
+            "name": "mahjan21.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan21.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "99bf81d3573651b84fbd0568d2e95dd1": {
+            "format": "jpg",
+            "id": "99bf81d3573651b84fbd0568d2e95dd1",
+            "name": "mahjan22.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan22.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "da6aa5adffd3c82e9d8d1a1804e6b53d": {
+            "format": "jpg",
+            "id": "da6aa5adffd3c82e9d8d1a1804e6b53d",
+            "name": "mahjan23.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan23.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "f63eaf61e66ad9e156e53eecc7dee701": {
+            "format": "jpg",
+            "id": "f63eaf61e66ad9e156e53eecc7dee701",
+            "name": "mahjan3.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan3.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "b5dcd960a302598049c18cc4c20a3235": {
+            "format": "jpg",
+            "id": "b5dcd960a302598049c18cc4c20a3235",
+            "name": "mahjan4.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan4.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "42bff08e754e700b2a1fd98a9166afc3": {
+            "format": "jpg",
+            "id": "42bff08e754e700b2a1fd98a9166afc3",
+            "name": "mahjan5.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan5.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "f78893da70c606167cc113dff9f8f062": {
+            "format": "jpg",
+            "id": "f78893da70c606167cc113dff9f8f062",
+            "name": "mahjan6.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan6.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "34a8b14d7e12a4119854e37d0d7d4775": {
+            "format": "jpg",
+            "id": "34a8b14d7e12a4119854e37d0d7d4775",
+            "name": "mahjan7.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan7.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "c1dbfb610a87949a4d50325908d77670": {
+            "format": "jpg",
+            "id": "c1dbfb610a87949a4d50325908d77670",
+            "name": "mahjan8.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan8.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        },
+        "a290fe758910b25b0082d430bd75d7e2": {
+            "format": "jpg",
+            "id": "a290fe758910b25b0082d430bd75d7e2",
+            "name": "mahjan9.jpg",
+            "path": "file:C:/Users/ntaka/workspace/jobcan_autotool/code_recongphoto/pytorch_ssd_mahjan/VOCdevkit/BCCD/JPEGImages/train/mahjan9.jpg",
+            "size": {
+                "width": 1920,
+                "height": 1080
+            },
+            "state": 2,
+            "type": 1,
+            "predicted": true
+        }
+    }
+}

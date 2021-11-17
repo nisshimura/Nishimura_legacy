@@ -1,0 +1,16 @@
+[ub604514@y12b009 12]$ cat midtextdef
+midtext()
+{
+    lines=$(cat "$1" | wc -l)
+    if [ $((lines % 2 )) -eq 0 ] ;then
+        sed -n "$((lines / 2)),+1p" "$1"
+    else
+        sed -n "$(((lines / 2) + 1))p" "$1"
+    fi
+}
+
+[ub604514@y12b009 12]$ source midtextdef
+[ub604514@y12b009 12]$ midtext sample.txt 
+Cc
+Dd
+[ub604514@y12b009 12]$ 

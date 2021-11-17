@@ -1,0 +1,186 @@
+<annotation>
+<filename>mahjan20.jpg</filename>
+<source>
+    <database>original</database>
+    <annotation>original</annotation>
+    <image>XXX</image>
+    <flickrid>0</flickrid>
+</source>
+<owner>
+    <flickrid>0</flickrid>
+    <name>?</name>
+</owner>
+    <size>
+        <width> 1920</width>
+        <height> 1080</height>
+        <depth>3</depth>
+    </size>
+    <object>
+        <name>sha</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 580</xmin>
+            <ymin> 580</ymin>
+            <xmax> 667</xmax>
+            <ymax> 686</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>4pin</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 669</xmin>
+            <ymin> 542</ymin>
+            <xmax> 739</xmax>
+            <ymax> 667</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>5pin</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 744</xmin>
+            <ymin> 530</ymin>
+            <xmax> 818</xmax>
+            <ymax> 633</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>4sou</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 823</xmin>
+            <ymin> 496</ymin>
+            <xmax> 892</xmax>
+            <ymax> 619</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>ton</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 892</xmin>
+            <ymin> 480</ymin>
+            <xmax> 952</xmax>
+            <ymax> 588</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>2wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 964</xmin>
+            <ymin> 460</ymin>
+            <xmax> 1022</xmax>
+            <ymax> 561</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>2wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1020</xmin>
+            <ymin> 436</ymin>
+            <xmax> 1080</xmax>
+            <ymax> 532</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>4sou</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1082</xmin>
+            <ymin> 410</ymin>
+            <xmax> 1152</xmax>
+            <ymax> 523</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>haku</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1142</xmin>
+            <ymin> 398</ymin>
+            <xmax> 1202</xmax>
+            <ymax> 499</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>chun</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1200</xmin>
+            <ymin> 384</ymin>
+            <xmax> 1260</xmax>
+            <ymax> 475</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>3pin</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1264</xmin>
+            <ymin> 364</ymin>
+            <xmax> 1317</xmax>
+            <ymax> 460</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>5wan</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1315</xmin>
+            <ymin> 340</ymin>
+            <xmax> 1368</xmax>
+            <ymax> 444</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>9sou</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1375</xmin>
+            <ymin> 328</ymin>
+            <xmax> 1425</xmax>
+            <ymax> 429</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>2sou</name>
+        <pose>Unspecified</pose>
+        <truncated>1</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin> 1425</xmin>
+            <ymin> 314</ymin>
+            <xmax> 1480</xmax>
+            <ymax> 420</ymax>
+        </bndbox>
+    </object>
+</annotation>
