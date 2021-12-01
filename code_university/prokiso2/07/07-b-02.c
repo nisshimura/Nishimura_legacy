@@ -2,24 +2,25 @@
 
 int i=0;
 int p=1,c=1;
-
-int my_retsu(int a ,int b)
+void my_retsu(int a ,int b)
 {
     if (i==b)
     {
-        return p,c;
+        printf("%dP%d=%d\n", a, b, p);
+        printf("%dC%d=%d\n", a, b, p/c);
+        return;
     }
-    ++i;
-    p*=
-    
-    a;
-    my_retsu(a-1,b);
+    p*=a-i;
+    c*=b-i;
+    ++i;  
+    my_retsu(a,b);
 }
 int main()
 {
-    int a,b;
-    printf("input two integers:");
+    int a,b,pans,cans;
+    printf("input m and n:");
     scanf("%d %d",&a,&b);
-    printf("a^b=%d",my_retsu(a,b));
+    my_retsu(a,b);
+
     return 0;
 }
