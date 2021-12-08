@@ -7,9 +7,8 @@ struct mydate
     int m;
 };
 
-struct mydate uru(struct mydate pb)
+int uru(struct mydate pb)
 {
-    struct mydate pc = {pb.y, pb.m};
     switch (pb.m)
     {
     case 1:
@@ -18,63 +17,55 @@ struct mydate uru(struct mydate pb)
     case 7:
     case 8:
     case 10:
-        if (pb.d == 31)
-        {
-            pc.tm++;
-            pc.td = 1;
-        }
-        else
-        {
-            pc.td++;
-        }
-        break;
+    case 12:
+        return 31;
     case 2:
-        if (pb.y % 4 == 0 && pb.d == 28)
-        {
-            pc.td++;
-        }
-        else if (pb.d >= 28)
-        {
-            pc.tm++;
-            pc.td = 1;
-        }
+        if (pb.y%4==0)
+            if (pb.y%100==0 && pb.y%400!=0)
+            {
+                return 28;
+            }
+            else
+            {
+                return 29;
+            }
         else
         {
-            pc.td++;
+            return 28;
         }
-        break;
+
     case 4:
     case 6:
     case 9:
     case 11:
-        if (pb.d == 30)
-        {
-            pc.tm++;
-            pc.td = 1;
-        }
-        else
-        {
-            pc.td++;
-        }
-        break;
-    case 12:
-        if (pb.d == 31)
-        {
-            pc.ty++;
-            pc.tm = 1;
-            pc.td = 1;
-        }
-
+        return 30;
     default:
         break;
     }
-    return pc;
-}
+    }
 int main()
 {
     struct mydate pa;
-    scanf("%d %d %d", &(pa.y), &(pa.m));
-    printdate(pa);
-    pc = tomorrow(pa);
+    int result;
+    printf("input year,month:");
+    scanf("%d %d", &(pa.y), &(pa.m));
+    result = uru(pa);
+    switch (result)
+    {
+    case 31:
+        printf("This month has thirty-one days");
+        break;
+    case 28:
+        printf("This month has twenty-eight days");
+        break;
+    case 30:
+        printf("This month has thirty days");
+        break;
+    case 29:
+        printf("This month has twenty-nine days");
+        break;
+    default:
+        break;
+    }
     return 0;
 }
