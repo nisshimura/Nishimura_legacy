@@ -3,21 +3,32 @@
 
 int main()
 {
-    int ruizyo, i, ascii2[8] = {0};
     unsigned int x;
+    int i,ruizyo,a[32]={0};
     printf("word=0x");
-    scanf("%x",x);
-    for (i = 7; i >= 0; i--)
+    scanf("%x",&x);
+
+    for (i=31;i>=0;i--)
     {
         ruizyo = pow(2, i);
-        if (ascii10 >= ruizyo)
+        if (x >= ruizyo)
         {
-            ascii2[7 - i] = 1;
-            ascii10 = ascii10 % ruizyo;
+            a[i] = 1;
+            x = x % ruizyo;
         }
     }
-    for (i = 0; i <= 7; i++)
+    for (i = 0; i <= 31; i++)
     {
-        printf("%d", ascii2[i]);
+        
+        if (a[i]==1)
+        {
+            printf("bit index = %d",i);
+            break;
+        }
+        if (i==31)
+        {
+            printf("bit index = 32");
+        }
     }
+    return 0;
 }
