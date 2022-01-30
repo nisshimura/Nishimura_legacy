@@ -1,0 +1,4 @@
+Sato 180 73
+Suzuki 176 65
+Tanaka 151 47
+Yamada 163 52
