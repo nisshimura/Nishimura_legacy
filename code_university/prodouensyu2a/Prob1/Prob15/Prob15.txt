@@ -1,0 +1,9 @@
+i=4,j=8
+boolean x=j==4||i>0&&j>0;は
+j==4 or i>0 and j>0
+分解すると、
+j==4はFalse
+i>0はTrue
+j>0はTrue
+であるため、False or True and True
+となり、xはTrueとなる。

@@ -11,7 +11,8 @@ class Tuner():
                 'mp3': ['/mp3/', '*.mp3', '.mp3'],
                 'mts': ['/mts/', '*.mts', '.MTS'],
                 'wav': ['/wav/', '*.wav', '.wav'],
-                'flac': ['/flac/', '*.flac', '.flac']
+                'flac': ['/flac/', '*.flac', '.flac'],
+                'mov': ['/mov/', '*.mov', '.mov']
                 }
 
     filename = 'C:/Users/ntaka/workspace/Nishimura_legacy/code_videoediter'
@@ -74,6 +75,8 @@ def main(in_ext, out_ext):
     elif in_ext == 'mp4' and out_ext == 'wav':
         Job.convert('mp4', 'mp3')
         Job.convert('mp3', 'wav')
+    elif in_ext == 'mov' and out_ext == 'mp4':
+        Job.convert('mov', 'mp4')
     else:
         print('CHECK THE CODE')
     
