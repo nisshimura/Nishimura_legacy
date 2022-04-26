@@ -1,0 +1,24 @@
+結果
+count = 4
+1: true
+2: false
+3: true
+4: true
+5: false
+count = 4
+Index for 3: 3
+Index for 4: 0
+1: true
+2: false
+3: true
+4: false
+5: false
+count = 4
+Index for 3: 2
+Index for 4: -1
+
+remove以前は、
+4163
+となっている。
+これにremoveメソッドを適用すると、
+1630となる。そのため、以降の結果が、index 3:2となり、4は存在しない。

@@ -1,0 +1,40 @@
+1
+MyPoint point;をMyPoint point = new MyPoint();とする。
+2
+MyPointクラスのxは、privateなので、直接値を設定できない。
+3
+int[] aの後に、int[] a = new int[1];とする必要がある。
+4
+配列aは4要素をもつため、0-3の配列番号しか持たない。
+5
+String[] langs = new String[]{"Python","C","Java"};
+6
+結果
+Hello!-4
+Hello!-422
+Hello!18
+
+System.out.println("Hello!"+i);
+i=-4がそのまま入るため。
+System.out.println("Hello!"+i+22);
+i,22が独立してそのまま出力される。
+System.out.println("Hello!"+(i+22));
+i+22=18が計算されたのち、出力される。
+7
+結果
+(1) x = 4
+(2) x = 8
+(3) x = 8
+(4) p = (0, 0)
+(5) p = (0, 0)
+(6) p = (2, 2)
+(7) a[0] = 20
+    a[1] = 22
+
+(1)基本型のintを用いて、x=4と定義しているため。
+(2)change()が呼ばれる、これは与えられた基本型の値に4を足し出力、これにmainでxに代入する。
+(3)change2が呼び出され、与えられた基本型の値に1が足されるが、その足された値がmainでxに代入されないため8のまま。
+(4)参照型変数のpに対してgetX,getY関数を呼び出し、MyPointの基本型変数x,yの値を読み取る、この時x,yは初期値0,0であるため。
+(5)changePoint1では、MyPointの新しいインスタンスを作成し、参照型のpにsetPointするが、mainでprintするインスタンスとは違うインスタンスであるため、(0,0)。
+(6)changePoint2では、与えられたインスタンス、参照型変数pに(2,2)が代入されるため、(2,2)
+(7)changeArrayでは、与えられた参照型の配列の[0]の値を20にする。
