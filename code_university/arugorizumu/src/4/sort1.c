@@ -29,15 +29,22 @@ void my_swap(struct student *a, struct student *b) {
 	memcpy(b, &c, sizeof(struct student));
 }
 void Bubble(int size) {
-	int i, j;
-	for (i = 0; i < size - 1; i++)
-		for (j = size - 1; j > i; j--)
-			/* If table[j-1] is larger than table[j] */
-			if (my_compare(&table[j-1],&table[j])==1){
-				/* Swap table[j-1] and table[j] */
-				my_swap(&table[j-1],&table[j]);
-			}
-				
+    int i, j;
+    for (i = 0; i < size - 1; i++) {
+        int counter_buble = 0;
+        for (j = size - 1; j > i; j--) {
+            /* If table[j-1] is larger than table[j] */
+
+            if (my_compare(&table[j - 1], &table[j]) == 1) {
+                /* Swap table[j-1] and table[j] */
+                my_swap(&table[j - 1], &table[j]);
+                counter_buble++;
+            }
+        }
+        if (counter_buble == 0) {
+            break;
+        }
+    }
 }
 void Select(int size) {
 	int i, j;

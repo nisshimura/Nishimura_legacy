@@ -1,0 +1,38 @@
+62015188
+西村喬行
+41
+static getNum()からは、インスタンス変数numにはアクセスできないため、
+int getNum()にする。
+
+42
+同じシグネチャのメソッドが同一クラス内に存在してしまっている。
+
+43
+finalで定義したPIの値を変更しようとしている。
+
+44
+実行結果
+A: 30
+B: 60
+C: 32.24
+C: 40.0
+A: 30
+C: 1200.0
+
+getMult(5, 6);
+static int getMult(int x, int y) が呼び出され、5*6=30が出力される
+
+getMult(5, 6, 2);
+static int getMult(int x, int y, int z)が呼び出され、5*6*2=60が出力される。
+
+getMult(5.2, 6.2);
+static double getMult(double x, double y)が呼び出され、5.2*6.2=32.24が出力される。
+
+getMult(getMult(20, 2.0), getMult(5,6));
+getMult(20, 2.0)では、double型が引数に存在しているため、double getMult(double x, double y)が呼び出される
+getMult(5,6)では、int getMult(int x, int y)
+getMult(getMult(20, 2.0), getMult(5,6))では、getMult(20, 2.0)の結果がdoubleであるため、double getMult(double x, double y)が呼び出される。
+
+45
+x<0の時にのみyを定義してるので、elseの際にはyが定義されていない状態でyに値を代入しようとしている。
+違うブロックにいるためできない。

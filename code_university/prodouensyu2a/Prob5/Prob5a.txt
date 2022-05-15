@@ -1,0 +1,52 @@
+51
+
+SuperClass() called
+SuperClass() called
+SuperClass(int x = 5) called
+SuperClass() called
+
+Constructor c1 = new Constructor();
+Constructor()は、super()で親クラスのコンストラクタを呼び出すため。
+
+Constructor c2 = new Constructor(5);
+Constructor(int x)には、super()が呼び出せれてないので、引数なしのSuperClassが呼ばれる。
+
+Constructor c3 = new Constructor(5, 13);
+Constructor(int x, int y)では、super(x)が呼び出されているので、superclass(x)が呼び出せれてないので、引数なしのSuperClassが呼ばれる。
+
+Constructor c4 = new Constructor(5, 1, 3);	
+Constructor(int x, int y, int z)では、super()が呼び出せれているので、superclass()が呼ばれる。
+
+52
+結果
+1)A:m1 A:m2 A:m3 
+2)B:m1 A:m2 A:m3
+3)C:m1 C:m2 A:m3
+4)C:m1 C:m2 A:m3
+
+showMessages("1)", v1);
+では、A.classのm1,m2,m3がそれぞれ呼ばれる。
+
+showMessages("2)", v2);
+m1はBの、m2はsuper.m2()なので、親クラスである、Aのm2が呼ばれる。
+m3,はB内にそんざいしないので、Aのm3が呼ばれる。
+
+showMessages("3)", v3);
+m1,m2はCのが呼ばれる。また、m3はsuper.m3()が呼ばれる。この時、親クラスであるBにはm3が存在しないため、
+さかのぼって、Aのm3が呼ばれる。
+
+showMessages("4)", v4);
+UserはCを継承している。また、Userには、m1,m2,m3が定義されていないため、親クラスの
+Cの各関数を使う。よって3と同様の結果となる。
+
+53
+(5)private変数xには、子クラスを含む他クラスからはアクセスできない。
+(6)private変数xには、子クラスを含む他クラスからはアクセスできない。
+(7)private変数xには、子クラスを含む他クラスからはアクセスできない。
+
+54
+Prob54でabstractによって必ず、methodXをオーバーライドしなければいけないが
+していない。
+
+55
+クラスAのインスタンスをBというちがう型に入れてしまっている。
