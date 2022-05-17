@@ -4,7 +4,9 @@ public class MyVectorUser {
         MyVector v2 = new MyVector(20, 22);
         MyVector v3 = new MyVector(20, 22);
         System.out.println("Number of MyVector instances is " + MyVector.getNumVec());
-        if (v1.isEqual(v2)) {
+        System.out.println(v1);
+        System.out.println(v2);
+        if (v1==v2) {
                 System.out.println("V1 and v2 are the same!");
                 v1.print();
         } else {
