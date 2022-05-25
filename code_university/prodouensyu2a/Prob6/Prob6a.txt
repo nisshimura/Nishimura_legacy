@@ -1,0 +1,54 @@
+62015188 NishimuraTakayuki 
+61
+result
+a) true
+b) false
+c) true 
+d) true 
+e) true 
+f) true 
+
+a,new S()で定義されたインスタンスは、Sのインスタンスであるため、true
+b,ner S()で定義されたインスタンスは、Sのインスタンスであるため、False
+c,ner T()で定義されたインスタンスは、Tのインスタンスだが、Sの子クラスであるためture
+d,new T()で定義されたインスタンスは、Tのインスタンスであるため、ture
+e,javaのクラスはobjectクラスのサブクラスであるため、true
+f,javaのクラスはobjectクラスのサブクラスであるため、true
+
+62
+修飾子finalをつかったメソッドはオーバーライドできない。
+
+63
+3-1
+A,メイン関数を定義しなければいけない。
+B,メイン関数を定義しなければいけない。
+C,メイン関数を定義しなければいけない。
+D,メイン関数を定義しなければいけない。
+IX,メイン関数を定義しなければいけない。
+IY,メイン関数を定義しなければいけない。
+User,
+結果
+A is called
+B is called
+D is called
+C is called
+IX is shown
+D is called
+D is shown
+IY is shown
+
+testClass(a);
+aは、Aのインスタンスであるため、AのshowMessageが呼び出される。
+testClass(b);
+bは、Bのインスタンスであり、BはAサブクラスであるため、BでオーバーライドされたshowMessageが呼び出される。
+testClass(d);
+dは、Dのインスタンスであり、DはAサブクラスであるため、DでオーバーライドされたshowMessageが呼び出される。
+testInterface(c);
+cはCのインスタンスであり、CはIXのサブクラスである。そのため、CのshowMessage()と
+Cでは、showが定義されてないのでIXのshowが呼ばれる。
+testInterface(d);
+dは、Dのインスタンスであり、DはA,IX,IYを継承している
+そこでDのshowMessage()、show()が呼ばれ、showでは、明示的にIYのshowを指定して
+IYのshowも呼ばれる
+3-2
+CはAを継承していないため。
