@@ -1,0 +1,51 @@
+Made a new Car instance
+Made a new Car instance
+Set number to 513 and fuel efficiency to 13.0
+100.0 liters of gas was added
+Car now has 100.0 liters of gas
+Set number to 515 and fuel efficiency to 23.5
+150.0 liters of gas was added
+Car now has 150.0 liters of gas
+
+Alex now has 320 yen
+Betsy now has 500 yen
+Charlotte now has 410 yen
+Dan could not get on the bus
+Emma now has 550 yen
+
+Bus (Num: 513) current status
+0:Alex
+1:Betsy
+feeSum300
+
+Bus (Num: 515) current status
+0:Charlotte
+1:Emma
+feeSum160
+
+Frank could not get on the bus
+Greg could not get on the bus
+Hannah now has 250 yen
+Isaac now has 160 yen
+
+Bus (Num: 513) current status
+0:Alex
+1:Betsy
+feeSum300
+
+Bus (Num: 515) current status
+0:Charlotte
+1:Emma
+2:Hannah
+3:Isaac
+feeSum320
+
+Alex got off the bus
+Alex was not on the bus
+Betsy got off the bus
+Betsy was not on the bus
+
+Bus (Num: 513) current status
+0:Alex
+1:Betsy
+feeSum300

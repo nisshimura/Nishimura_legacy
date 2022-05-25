@@ -12,7 +12,7 @@ public class test {
 
 
 public class myname extends test {
-    void check(test a, B b) {
+    void check(test a, myname b) {
         x = 5; // (5)
         a.x = 6; // (6)
         b.x = 7; // (7)
