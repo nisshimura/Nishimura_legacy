@@ -1,4 +1,5 @@
 
+from tkinter import N
 from sklearn import datasets
 from sklearn.model_selection import learning_curve, train_test_split
 from sklearn import svm
@@ -10,23 +11,31 @@ import pandas as pd
 # データの読み込み
 iris = datasets.load_iris()
 
-x, y = pd.DataFrame(iris.data, columns=iris.feature_names), iris.target
+x, y = iris.data,iris.target
 
+print(f"x{len(x)}")
+print(f"x{list(map(list,set(map(tuple,x))))}")
 # トレーニングデータとテストデータに分ける
-#x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=1)
+#x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=2)
 
 #print(len(x_train),len(y_train))
 # モデルの選択
 model = LogisticRegression()
 #model = svm.SVC()
-train_sizes = np.arange(5, len(x), 5)
-train_size_abs, train_scores, test_scores = learning_curve(
-    model, x, y, train_sizes=train_sizes, shuffle=True)
+train_sizes = np.arange(5, 120, 5)
+model.fit(x, y)
 
+train_size_abs, train_scores, test_scores = learning_curve(
+     model, x, y, train_sizes=train_sizes, shuffle=True)
+
+print(f"train_size_abs\n{train_size_abs}\ntrain_scores\n{train_scores}\ntest_scores\n{test_scores}")
 # 学習
-model.fit(x_train, y_train)
 
 #学習曲線
+
+
+
+
 
 train_scores_mean = np.mean(train_scores, axis=1)
 train_scores_std = np.std(train_scores, axis=1)
