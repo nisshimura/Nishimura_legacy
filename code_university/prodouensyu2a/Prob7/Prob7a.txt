@@ -1,0 +1,36 @@
+62015188 西村喬行
+1
+(a)p.getY()は、public修飾子が用いられずに定義されているため、パッケージ外からアクセスできない。
+(b)void moveY(int dy){y+=dy;}のyは、Pointクラスのprivateで定義されているため、クラス外からアクセス出来ない。
+(c)getY()は、public修飾子が用いられずに定義されているため、パッケージ外からアクセスできない。
+
+2
+0
+バージョン10
+1
+a Object
+b 
+「標準」出力ストリームです。 このストリームはすでに開いていて、出力データの受け取りが可能です。 通常、このストリームはディスプレイ出力、またはホスト環境やユーザーによって指定される出力先の出力と一致します。 文字からバイトへの変換で使用されるエンコーディングは、Consoleが存在する場合はConsole.charset()、それ以外の場合はCharset.defaultCharset()です。
+単純なスタンドアロンのJavaアプリケーションにおいて、出力データの行を書き込む一般的な方法は以下のとおりです。
+
+     System.out.println(data)
+c
+boolean,char,char[],double,float,int,long,java.lang.Object,java.lang.String,
+2
+a
+int プリミティブ型
+integer クラス型
+Integerクラスは、プリミティブ型intの値をオブジェクトにラップします。
+Integer型のオブジェクトには、型がintの単一フィールドが含まれます。
+
+b
+AtomicInteger, AtomicLong, BigDecimal, BigInteger, Byte, Double, DoubleAccumulator, DoubleAdder, Float, Integer, Long, LongAccumulator, LongAdder, Short
+3
+Randomクラス
+4
+String aNewString = aString.substring(2,7)
+
+73
+a
+arraylistはString型しか格納できないが、Pointインスタンスを格納試用としているため。
+
