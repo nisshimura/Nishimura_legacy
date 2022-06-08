@@ -49,6 +49,7 @@ def make_model(results):
     test_accuracy_mean = np.mean(test_accuracy, axis=1)
     test_accuracy_std = np.std(test_accuracy, axis=1)
 
+
     plt.figure()
     plt.title("Learning Curve")
     plt.xlabel("Training examples")
@@ -71,7 +72,7 @@ def make_model(results):
     plt.show()
 
     # # 評価
-    # y_pred = model.predict(x_test)
+    y_pred = model.predict(x_test)
 
     # #混同行列
     # cmatrix = confusion_matrix(y_test, y_pred)
@@ -80,7 +81,7 @@ def make_model(results):
     # print(df)
 
     # #正解率　TP＋TN/ALL
-    # print('Accuracy:', accuracy_score(y_test, y_pred))
+    print('Accuracy:', accuracy_score(y_test, y_pred))
 
     # #適合率　精度 TP/TP+FP
     # print('Precision:', precision_score(y_test, y_pred, average='micro'))
