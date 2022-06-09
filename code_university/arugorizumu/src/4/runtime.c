@@ -6,7 +6,7 @@
 #define NAME_SIZE 32
 
 struct student {
-    int score;
+    double score;
     char name[NAME_SIZE];
 };
 struct student *table;
@@ -93,7 +93,6 @@ void Insert(int size) {
             j--;
         }
     }
-}
     gettimeofday(&etime, NULL);
     sec = (etime.tv_sec - stime.tv_sec) +
           (etime.tv_usec - stime.tv_usec) / 1000000.0;
@@ -127,7 +126,8 @@ void Shell(int size) {
 void Disp(int size) {
     int i;
     for (i = 0; i < size; i++)
-        printf("%d\t%s\n", table[i].score, table[i].name);
+        printf("%lf\t%s\n", table[i].score, table[i].name);
+        printf("num:%d\n",i);
 }
 int main(int argc, char *argv[]) {
     FILE *fp;
@@ -154,7 +154,7 @@ int main(int argc, char *argv[]) {
     n = 0;
     fseek(fp, 0L, SEEK_SET);
     while (fgets(buf, BUF_SIZE, fp) != NULL) {
-        sscanf(buf, "%d\t%s", &table[n].score, table[n].name);
+        sscanf(buf, "%lf%s", &table[n].score, table[n].name);
         n++;
     }
     fclose(fp);
