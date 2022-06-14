@@ -1,0 +1,63 @@
+62015188 西村喬行
+1
+throw 1
+結果
+Program = Java
+OK! Let's program!
+Exception in thread "main" java.lang.Exception: I don't know Smalltalk!
+        at Throw1.methodA(Throw1.java:4)
+        at Throw1.main(Throw1.java:10)
+
+まずmain内のmethodAが呼ばれ、methodAのif内を通らずに、Program=Javaが実行される。
+mainメソッド内の3行目の、methodAに引数"Smalltalk"が渡され、throw new Exception("I don't know Smalltalk!");
+が実行され、Exceptionのコンストラクタに"I don't know Smalltalk!"が渡され、エラー文が表示される。
+
+throw2
+結果
+Program = Java
+OK! Let's program!
+I don't know Smalltalk!
+The actual end
+
+try内のmethodAが呼ばれ、program=javaが出力
+3行目のmethodAが呼ばれ、throw Exceptionが投げられる。
+catchに飛び。eのエラー文I dont know Smalltalkが出力
+その後は、一番下のprintが出力。
+
+throw3
+結果
+The finally program is Java
+Program = Java
+OK! Let's program!
+The finally program is Smalltalk
+I don't know Smalltalk!
+The actual end
+
+methodAで、javaが渡され、methodA内のtry内を通過し、finallyで。The finally program is javaが出力。
+3行目のmethodAで、エラーが投げられる。その後、finallyでThe finally program is smalltalkが出力。
+main内では、エラーが検出されたのでcatch内でエラー文 I dont know smalltalkが出力。
+その後、mainのThe actual endが出力。
+
+2
+throw4
+結果
+Before a
+Before b
+Before c
+c: finally
+b: finally
+a: java.lang.NumberFormatException: For input string: "6.19"
+a: finally
+After a
+main: finally
+
+mainでaが呼ばれる、aで、bが呼ばれ、bでcが呼ばれる
+cでNumberFormatExceptionが投げられ、finallyでc;finallyが出力。
+bでは、cでエラーが出たが、NumberFormatExceptionをcatch出来ずにfinallyでb:finallyが出力。
+aでは、cで出たNumberFormatExceptionをcatchできるので。エラー文が出力される。
+その後、a:finallyが出力。
+mainでは、aではエラーが出ていないので、after:a、fianllyでmain:finallyが出力。
+
+3
+throw5
+Exceptionは、ArithmeticExceptionの親クラスであるため、 エラー: 例外ArithmeticExceptionはすでに捕捉されていますとでてしまう。
