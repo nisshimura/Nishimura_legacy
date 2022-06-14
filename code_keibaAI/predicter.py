@@ -1,9 +1,10 @@
+from copyreg import pickle
 from matplotlib.pyplot import axis
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
-
+import pickle
 from sklearn import datasets
 
 import pandas as pd
@@ -34,15 +35,19 @@ def make_model(results):
     X = df.drop(["rank"],axis=1)
     y = df["rank"]
     x_train, x_test, y_train, y_test = train_test_split(X, y, stratify=y,test_size=0.3,random_state=2)
-    model = LogisticRegression()
+    #model = LogisticRegression(max_iter=100)
+    model = KNeighborsClassifier(n_neighbors=3)
 
     #学習
     model.fit(x_train, y_train)
+    return model,x_train, x_test, y_train, y_test
 
+    
+
+def eval(model,x_train,x_test,y_train,y_test):
+    #学習正解曲線
     train_size_abs, train_accuracy, test_accuracy = learning_curve(
         model, x_train, y_train, train_sizes=np.linspace(0.1, 1, 1000), random_state=1, shuffle=True)
-
-    #学習正解曲線
 
     train_accuracy_mean = np.mean(train_accuracy, axis=1)
     train_accuracy_std = np.std(train_accuracy, axis=1)
@@ -95,5 +100,8 @@ def make_model(results):
 
 
 df_d = preprocess(results)
-make_model(df_d)
+model,x_train, x_test, y_train, y_test = make_model(df_d)
+filename = "./models/Logistic.pkl"
+pickle.dump(model,open(filename,'wb'))
+eval(model,x_train, x_test, y_train, y_test)
 
