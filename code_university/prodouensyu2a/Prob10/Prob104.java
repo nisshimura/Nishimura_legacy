@@ -4,9 +4,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.lang.Math;
 
+import java.lang.Math;
+import java.io.FileWriter;
 public class Prob104 {
     public static void main(String[] args) {
         File file1 = new File("input1041.txt");
@@ -65,22 +65,73 @@ public class Prob104 {
         } catch (IOException e) {
             System.out.println("error is occured");
         }
-        System.out.println(input1);
-        System.out.println(input2);
 
-        ArrayList<ArrayList<String>> output = new ArrayList<ArrayList<String>>();
-        for (int i=0;i<Math.max(input1.size(),input2.size());i++){
-            ArrayList<String> tmp = new ArrayList<String>();
-            if (input1.get(i).get(0).equals("NULL")){
-                for (int j=0;j<input2.get())
-            }
-            else if (input2.get(i).get(0).equals("NULL")){
-
+        ArrayList<ArrayList<Integer>> output = new ArrayList<ArrayList<Integer>>();
+        
+        for (int i=0;i<Math.min(input1.size(),input2.size());i++){
+            ArrayList<Integer> tmp = new ArrayList<Integer>();
+            
+            if (input1.get(i).size()==input2.get(i).size()){
+                
+                for (int j=0;j<input1.get(i).size();j++){
+                    tmp.add(Integer.valueOf(input1.get(i).get(j))*Integer.valueOf(input2.get(i).get(j)));
+                }
             }
             else{
-
+                if (input1.get(i).get(0).equals("NULL")){
+                    for (int j=0;j<input2.get(i).size();j++){
+                        tmp.add(0);
+                    }
+                }
+                else if (input2.get(i).get(0).equals("NULL")){
+                    
+                    for (int j=0;j<input1.get(i).size();j++){
+                        tmp.add(0);
+                    }
+                }
+                else if (input1.get(i).size()!=input2.get(i).size()){
+                    for (int j=0;j<Math.min(input1.get(i).size(),input2.get(i).size());j++){
+                        tmp.add(Integer.valueOf(input1.get(i).get(j))*Integer.valueOf(input2.get(i).get(j)));
+                    }
+                    for (int j=Math.min(input1.get(i).size(),input2.get(i).size());j<Math.max(input1.get(i).size(),input2.get(i).size());j++){
+                        tmp.add(0);
+                    }
+                }
             }
+            output.add(tmp);
         }
+
+        for(int i=Math.min(input1.size(), input2.size());i<Math.max(input1.size(), input2.size());i++){
+            ArrayList<Integer> tmp = new ArrayList<Integer>();
+            if (!input1.get(i).isEmpty()){
+                for (int j=0;j<input1.get(i).size();j++){
+                    tmp.add(0);
+                }
+            }
+            else if (!input2.get(i).isEmpty()){
+                for (int j=0;j<input2.get(i).size();j++){
+                    tmp.add(0);
+                }
+            }
+            output.add(tmp);
+        }
+        try{
+            File out = new File("output1041.txt");
+            FileWriter out_file = new FileWriter(out);
+            for (int i=0;i<output.size();i++){
+                for (int j=0;j<output.get(i).size();j++){
+                    out_file.write(String.valueOf(output.get(i).get(j)));
+                    if (j!=output.get(i).size()-1){
+                        out_file.write(",");
+                    }
+                }
+                out_file.write("\n");
+            }
+            out_file.close();
+          }catch(IOException e){
+            System.out.println(e);
+          }
+        
     }
 
 }
