@@ -1,3 +1,6 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 public class Buggy {
 	public boolean isPerfect(int num) {
 		int sum= 0;
@@ -8,4 +11,10 @@ public class Buggy {
 		}
 		return (sum == num);
 	}
+
+	@Test
+	void test(){
+
+	}
+
 }
