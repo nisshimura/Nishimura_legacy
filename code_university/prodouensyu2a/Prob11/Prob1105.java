@@ -168,12 +168,12 @@ public class Prob1105 {
     public static void main(String[] args) {
         Prob1105 a = new Prob1105();
         // if (a.isAble(args[0])){
-        //     System.out.println(a.getmoji(integer.valueOf("8392047001")));
+        //     System.out.println(a.getmoji(integer.valueOf(args[0])));
         // }
         // else{
         //     System.out.println("ERROR!!");
         // }
-        System.out.println(a.getmoji(Long.valueOf("8392047001")));
+        System.out.println(a.getmoji(Long.valueOf("999999999")));
 
     }
 }
