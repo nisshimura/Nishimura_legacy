@@ -1,0 +1,5 @@
+4
+bob,1,chair,chair,table
+bob,1
+kate,2,chair,pot,table
+mike,3
